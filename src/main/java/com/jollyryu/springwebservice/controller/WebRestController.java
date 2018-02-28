@@ -10,5 +10,9 @@ public class WebRestController {
         return "Hello";
     }
 
+    @GetMapping
+    public void requestTest() {
+        return null
+    }
 
 }
