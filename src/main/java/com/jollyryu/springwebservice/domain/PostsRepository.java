@@ -1,4 +1,6 @@
 package com.jollyryu.springwebservice.domain;
 
-public interface PostsRepository {
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface PostsRepository extends JpaRepository<Posts, Long> {
 }

@@ -14,7 +14,7 @@ import javax.persistence.Id;
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Getter
 @Entity //언더스코어 네이밍(_)으로 이름을 매칭합니다. ex) SalesManager.java -> sales_manager table
-public class Posts {
+public class Posts extends BaseTimeEntity{
 
     @Id
     @GeneratedValue
