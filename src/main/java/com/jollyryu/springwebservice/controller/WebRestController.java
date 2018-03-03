@@ -1,6 +1,6 @@
 package com.jollyryu.springwebservice.controller;
 
-import com.jollyryu.springwebservice.domain.PostsRepository;
+
 import com.jollyryu.springwebservice.dto.PostsSaveRequestDto;
 import com.jollyryu.springwebservice.service.PostsService;
 import lombok.AllArgsConstructor;
@@ -9,13 +9,11 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import javax.validation.constraints.Null;
 
 @RestController
 @AllArgsConstructor
 public class WebRestController {
 
-    private PostsRepository postsRepository;
     private PostsService postsService;
 
     @GetMapping("/hello")
