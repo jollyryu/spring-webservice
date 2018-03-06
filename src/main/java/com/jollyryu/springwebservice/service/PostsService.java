@@ -16,6 +16,7 @@ public class PostsService {
         postsRepository.save(entity);
 
         System.out.println("success");
+        System.out.println("commit and merge");
     }
 
 }
