@@ -21,9 +21,9 @@ public class WebRestController {
         return "Hello";
     }
 
-    @GetMapping("/request")
-    public void requestTest() {
-
+    @GetMapping("/")
+    public String main() {
+        return "main";
     }
 
     @PostMapping("/posts")
