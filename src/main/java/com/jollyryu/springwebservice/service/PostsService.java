@@ -17,6 +17,8 @@ public class PostsService {
 
         System.out.println("success");
         System.out.println("commit and merge");
+        System.out.println("aaa");
+
         System.out.println("last message");
     }
 
