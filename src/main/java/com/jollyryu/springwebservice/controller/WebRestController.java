@@ -4,6 +4,7 @@ package com.jollyryu.springwebservice.controller;
 import com.jollyryu.springwebservice.dto.PostsSaveRequestDto;
 import com.jollyryu.springwebservice.service.PostsService;
 import lombok.AllArgsConstructor;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -21,9 +22,12 @@ public class WebRestController {
         return "Hello";
     }
 
-    @GetMapping("/")
-    public String main() {
-        return "main";
+    @GetMapping("/list")
+    public String main(Model model) {
+
+        model.addAttribute("posts", postsService.findAllDesc());
+
+        return "test";
     }
 
     @PostMapping("/posts")
