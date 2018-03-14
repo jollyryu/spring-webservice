@@ -19,7 +19,7 @@ public class WebRestController {
 
     @GetMapping("/hello")
     public String hello() {
-        return "Hello";
+        return "dddd";
     }
 
     @GetMapping("/list")
