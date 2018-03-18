@@ -25,6 +25,7 @@ public class WebRestController {
     @GetMapping("/")
     public String main(Model model) {
 //        test1
+//        test2
         model.addAttribute("posts", postsService.findAllDesc());
 
         return "test";
