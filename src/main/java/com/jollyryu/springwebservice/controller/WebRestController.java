@@ -9,7 +9,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
 
 
 @Controller
@@ -25,14 +24,14 @@ public class WebRestController {
 
     @GetMapping("/")
     public String main(Model model) {
-
+//        test1
         model.addAttribute("posts", postsService.findAllDesc());
 
         return "test";
     }
 
     @PostMapping("/posts")
-        public void savePosts(@RequestBody PostsSaveRequestDto dto) {
+    public void savePosts(@RequestBody PostsSaveRequestDto dto) {
         System.out.println(dto.getAuthor());
         postsService.save(dto.toEntity());
     }
