@@ -8,26 +8,12 @@
 <h3>Spring Boot and Thymeleaf</h3>
 <p>Hello World!</p>
 
-<table>
-    <tr th:if="${not #lists.isEmpty(posts)}" th:each="data : ${posts}">
 
-        <td>
-d
-
-        </td>
-
-
-
-        <td th:text="${posts.title}" ></td>
-
-        <td th:text="${posts.contents}" ></td>
-
-
+<table th:object="${posts}" id="userTable" border="1">
+    <tr th:each="user: {posts}">
+        <td  th:text="${user.title}"></td>
+        <td  th:text="${user.author}"></td>
     </tr>
-
-
-
-
 </table>
 
 
