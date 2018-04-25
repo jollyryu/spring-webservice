@@ -9,8 +9,8 @@
 <p>Hello World!</p>
 
 
-<table th:object="${posts}" id="userTable" border="1">
-    <tr th:each="user: {posts}">
+<table id="userTable" border="1">
+    <tr th:each="user : ${posts}">
         <td  th:text="${user.title}"></td>
         <td  th:text="${user.author}"></td>
     </tr>
