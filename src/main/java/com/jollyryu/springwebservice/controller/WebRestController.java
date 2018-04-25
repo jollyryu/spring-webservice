@@ -31,8 +31,10 @@ public class WebRestController {
     }
 
     @PostMapping("/posts")
-    public void savePosts(@RequestBody PostsSaveRequestDto dto) {
+    public String savePosts(@RequestBody PostsSaveRequestDto dto) {
         System.out.println(dto.getAuthor());
         postsService.save(dto.toEntity());
+
+        return "test";
     }
 }
